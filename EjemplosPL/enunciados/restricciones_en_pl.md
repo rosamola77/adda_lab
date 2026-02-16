@@ -1,16 +1,16 @@
 En programación lineal entera podemos introducir el operador **allDifferents**:
 
 $$
-AD_{i=0}^{n-1} v_i \equiv
+AD_{i=0}^{n-1} x_i \equiv
 \left\\{ 
 \begin{array}{ll}
-\min \sum\limits_{i=0,j=0| j \gt i}^{n-1} z_{ij} & \\
-z_{ij} \ge x_i - x_j & i \in [0,n), j \in [0,n) | j \gt i \\
-z_{ij} \ge x_j - x_i & i \in [0,n), j \in [0,n) | j \gt i \\
-z_{ij}> \epsilon & i \in [0,n), j \in [0,n) | j \gt i \ \ \text{$\epsilon=1$ si x, y enteras, si reales un valor pequeño y positivo}
+z_{ij} = 1 \rightarrow x_i - x_j \ge 1 & i \in [0,n), j \in [0,n) | j \gt i \\
+z_{ij} = 0 \rightarrow x_i - x_j \le -1 & i \in [0,n), j \in [0,n) | j \gt i \\
+bin \ z_{ij} & i \in [0,n), j \in [0,n) | j \gt i  \\
 \end{array}
 \right.
 $$
+
 
 Toma valores en el conjunto:
 
@@ -82,10 +82,9 @@ $$
 x \neq y \equiv 
 \left\\{ 
 \begin{array}{ll}
-\min z & \\
-z \ge x-y & \\
-z \ge y-x & \\
-z \ge 1 & \text{Si x, y enteras, si reales un valor epsilon pequeño y positivo} \\ 
+z = 1 \rightarrow x - y \ge 1 &  \\
+z = 0 \rightarrow x - y \le -1 &  \\
+bin \ z  & \\ 
 \end{array}
 \right.
 $$
