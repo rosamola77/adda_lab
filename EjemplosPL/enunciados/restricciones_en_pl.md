@@ -2,7 +2,7 @@ En programación lineal entera podemos introducir el operador **allDifferents**:
 
 $$
 AD_{i=0}^{n-1} x_i \equiv
-\left\{ 
+\left\\{ 
 \begin{array}{ll}
 z_{ij} = 1 \rightarrow x_i - x_j \ge 1 & i \in [0,n), j \in [0,n) | j \gt i \\
 z_{ij} = 0 \rightarrow x_i - x_j \le -1 & i \in [0,n), j \in [0,n) | j \gt i \\
