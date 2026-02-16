@@ -1,0 +1,15 @@
+head section
+// Incluir los metodos necesarios, entre ellos:
+Integer getNumCandidatos()
+// ...
+// Definir las constantes necesarias con algunos metodos anteriores, entre ellas:
+Integer n = getNumCandidatos()
+
+goal section
+// decidir MAX/MIN y expresar como funcion lineal
+
+constraints section
+// Seguir las restricciones del modelo y expresar como f. lineal
+
+bin
+x[i], i in 0 .. n

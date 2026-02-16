@@ -1,0 +1,15 @@
+// CONTENEDORES
+CONT01: capacidad=45; tipo=A;
+CONT02: capacidad=50; tipo=B;
+CONT03: capacidad=55; tipo=C;
+//ELEMENTOS
+E01: 16; A,B
+E02: 14; B,C
+E03: 8; A,C
+E04: 7; A,B
+E05: 8; A,C
+E06: 15; B,C
+E07: 9; A,B
+E08: 6; A,C
+E09: 40; B,C
+E10: 12; B

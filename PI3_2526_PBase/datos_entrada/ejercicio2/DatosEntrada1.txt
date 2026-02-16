@@ -1,0 +1,19 @@
+T_prod = 1560
+T_elab = 1645
+// COMPONENTES
+C01: prod=15; elab=8;
+C02: prod=19; elab=3;
+C03: prod=3; elab=13;
+C04: prod=1; elab=17;
+C05: prod=5; elab=14;
+// PRODUCTOS
+P01 -> precio=1345; comp=(C03:9),(C01:4),(C04:2),(C02:5),(C05:8); max_u=2
+P02 -> precio=912; comp=(C02:8),(C05:5),(C04:5); max_u=3
+P03 -> precio=340; comp=(C02:6); max_u=5
+P04 -> precio=1172; comp=(C01:5),(C02:4),(C05:6),(C03:7),(C04:2); max_u=2
+P05 -> precio=1797; comp=(C02:8),(C01:9),(C04:10),(C05:8); max_u=2
+P06 -> precio=1652; comp=(C03:9),(C04:6),(C02:9),(C01:9); max_u=2
+P07 -> precio=1490; comp=(C04:10),(C01:8),(C05:2),(C03:5),(C02:5); max_u=2
+P08 -> precio=235; comp=(C04:5); max_u=5
+P09 -> precio=2085; comp=(C05:10),(C02:9),(C04:8),(C03:10),(C01:6); max_u=2
+P10 -> precio=462; comp=(C02:3),(C01:5); max_u=4
