@@ -82,10 +82,9 @@ $$
 x \neq y \equiv 
 \left\\{ 
 \begin{array}{ll}
-\min z & \\
-z \ge x-y & \\
-z \ge y-x & \\
-z \ge 1 & \text{Si x, y enteras, si reales un valor epsilon pequeño y positivo} \\ 
+z = 1 \rightarrow x - y \ge 1 &  \\
+z = 0 \rightarrow x - y \le -1 &  \\
+bin \ z  & \\ 
 \end{array}
 \right.
 $$
