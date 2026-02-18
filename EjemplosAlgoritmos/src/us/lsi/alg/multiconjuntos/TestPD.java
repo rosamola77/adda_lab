@@ -28,7 +28,7 @@ public class TestPD {
 
 			// V�rtices clave
 
-			MulticonjuntoVertex start = MulticonjuntoVertexI.start();
+			MulticonjuntoVertex start = MulticonjuntoVertex.start();
 
 			// Grafo
 

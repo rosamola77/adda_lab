@@ -24,7 +24,7 @@ public class TestMonedasBT {
 		DatosMonedas.datosIniciales("ficheros/monedas/monedas2.txt");
 		Integer valorInicial = 400;
 
-		MonedasVertex e1 = MonedasVertexI.first(valorInicial);
+		MonedasVertex e1 = MonedasVertex.first(valorInicial);
 		
 		EGraph<MonedasVertex, MonedasEdge> graph = 
 				EGraph.virtual(e1)
@@ -63,7 +63,7 @@ public class TestMonedasBT {
 
 		Collections.sort(DatosMonedas.monedas, Comparator.comparing(m -> m.pesoUnitario()));
 
-		MonedasVertex e3 = MonedasVertexI.first(valorInicial);
+		MonedasVertex e3 = MonedasVertex.first(valorInicial);
 
 		graph = EGraph.virtual(e3)
 				.pathType(PathType.Sum)

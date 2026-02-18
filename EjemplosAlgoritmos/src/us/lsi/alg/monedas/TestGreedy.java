@@ -29,7 +29,7 @@ public class TestGreedy {
 			
 			Collections.sort(DatosMonedas.monedas, Comparator.comparing(m ->-m.pesoUnitario()));
 //			System.out.println(DatosMonedas.valorInicial + "--------");
-			MonedasVertexI e1 = MonedasVertexI.first(400+i);
+			MonedasVertex e1 = MonedasVertex.first(400+i);
 			//		MonedaVertex e2 = MonedaVertex.last();
 			EGraph<MonedasVertex, MonedasEdge> graph = EGraph.virtual(e1)
 					.pathType(PathType.Sum)
@@ -46,7 +46,7 @@ public class TestGreedy {
 //			System.out.println(String.format("%s",SolucionMonedas.of(path.getEdgeList().stream().map(e->e.action()).toList())));
 			Collections.sort(DatosMonedas.monedas, Comparator.comparing(m -> m.pesoUnitario()));
 			//		System.out.println(Moneda.monedas);
-			e1 = MonedasVertexI.first(400+i);
+			e1 = MonedasVertex.first(400+i);
 			graph = EGraph.virtual(e1)
 					.pathType(PathType.Sum)
 					.type(Type.Min)

@@ -19,7 +19,7 @@ public class MochilaHeuristic {
 		Double weight = 0.;
 		Integer index = v1.index();
 		Double cr = (double)v1.capacidadRestante();		
-		while(!(index==MochilaVertexI.n || cr==0.)) {
+		while(!(index==MochilaVertex.n || cr==0.)) {
 			Double a = Math.min(cr/DatosMochila.getPeso(index),DatosMochila.getNumMaxDeUnidades(index));
 			cr = cr - a * DatosMochila.getPeso(index);
 			weight += a * DatosMochila.getValor(index);

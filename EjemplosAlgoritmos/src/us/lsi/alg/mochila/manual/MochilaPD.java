@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-import us.lsi.alg.mochila.MochilaVertexI;
+import us.lsi.alg.mochila.MochilaVertex;
 import us.lsi.alg.mochila.SolucionMochila;
 import us.lsi.mochila.datos.DatosMochila;
 
@@ -29,8 +29,8 @@ public class MochilaPD {
 		return new MochilaPD();
 	}
 	
-	private MochilaVertexI start;
-	private Map<MochilaVertexI,Spm> memory;
+	private MochilaVertex start;
+	private Map<MochilaVertex,Spm> memory;
 	private SolucionMochila solucion;
 	private Long time;
 	
@@ -44,7 +44,7 @@ public class MochilaPD {
 	
 	public SolucionMochila pd(Integer initialCapacity) {
 		this.time = System.nanoTime();
-		this.start = MochilaVertexI.of(0,initialCapacity);
+		this.start = MochilaVertex.of(0,initialCapacity);
 		this.memory = new HashMap<>();
 		pd(start,0,memory);
 		SolucionMochila r = this.solucion();
@@ -52,7 +52,7 @@ public class MochilaPD {
 		return r;
 	}
 	
-	private Spm pd(MochilaVertexI vertex,Integer accumulateValue, Map<MochilaVertexI,Spm> memory) {
+	private Spm pd(MochilaVertex vertex,Integer accumulateValue, Map<MochilaVertex,Spm> memory) {
 		Spm r=null;
 		if(memory.containsKey(vertex)) {
 			r = memory.get(vertex);
@@ -76,7 +76,7 @@ public class MochilaPD {
 	
 	public SolucionMochila solucion(){
 		List<Integer> acciones = new ArrayList<>();
-		MochilaVertexI v = this.start;
+		MochilaVertex v = this.start;
 		Spm s = this.memory.get(v);
 		if(s == null) return this.solucion;
 		while(s.a() != null) {
@@ -91,7 +91,7 @@ public class MochilaPD {
 		Locale.setDefault(Locale.of("en", "US"));
 		DatosMochila.iniDatos("ficheros/mochila/objetosMochila.txt");
 		DatosMochila.capacidadInicial = 78;
-		MochilaVertexI v1 = MochilaVertexI.of(0, DatosMochila.capacidadInicial);
+		MochilaVertex v1 = MochilaVertex.of(0, DatosMochila.capacidadInicial);
 		SolucionMochila s = Heuristica.solucionVoraz(v1);	
 		System.out.println("Voraz " + "=== "+  s);	
 		MochilaPD a = MochilaPD.of();

@@ -22,8 +22,8 @@ public class TestBTMochila {
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.of("en", "US"));
 		DatosMochila.iniDatos("ficheros/mochila/objetosMochila.txt");
-		MochilaVertexI.capacidadInicial = 78;
-		MochilaVertex e1 = MochilaVertexI.initialVertex();
+		MochilaVertex.capacidadInicial = 78;
+		MochilaVertex e1 = MochilaVertex.initialVertex();
 		
 		EGraph<MochilaVertex, MochilaEdge> graph = 
 				EGraph.virtual(e1)

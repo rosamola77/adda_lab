@@ -52,7 +52,7 @@ public class TestMonedasPDR {
 
 		Collections.sort(DatosMonedas.monedas, Comparator.comparing(m -> m.pesoUnitario()));
 
-		MonedasVertex e3 = MonedasVertexI.first(valorInicial);
+		MonedasVertex e3 = MonedasVertex.first(valorInicial);
 		
 		graph = EGraph.virtual(e3)
 				.pathType(PathType.Sum)

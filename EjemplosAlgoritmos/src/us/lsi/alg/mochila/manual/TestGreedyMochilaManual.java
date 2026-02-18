@@ -1,5 +1,6 @@
 package us.lsi.alg.mochila.manual;
 
+
 import java.util.Locale;
 
 import org.jgrapht.GraphPath;
@@ -7,7 +8,6 @@ import org.jgrapht.graph.SimpleDirectedGraph;
 
 import us.lsi.alg.mochila.MochilaEdge;
 import us.lsi.alg.mochila.MochilaVertex;
-import us.lsi.alg.mochila.MochilaVertexI;
 import us.lsi.colors.GraphColors;
 import us.lsi.graphs.Graphs2;
 import us.lsi.graphs.alg.GreedyOnGraph;
@@ -17,11 +17,16 @@ import us.lsi.mochila.datos.DatosMochila;
 import us.lsi.path.EGraphPath.PathType;
 
 public class TestGreedyMochilaManual {
+	
+	
+	
 
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.of("en", "US"));
 		DatosMochila.iniDatos("ficheros/mochila/objetosMochila.txt");
-		MochilaVertexI.capacidadInicial = 78;
+		MochilaVertex.capacidadInicial = 78;
+		
+		
 		MochilaVertex v1 = MochilaVertex.initialVertex();
 		EGraph<MochilaVertex, MochilaEdge> graph = 
 				EGraph.virtual(v1)

@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 
-import us.lsi.alg.mochila.MochilaVertexI;
+import us.lsi.alg.mochila.MochilaVertex;
 import us.lsi.common.Multiset;
 import us.lsi.hypergraphs.VirtualHyperVertex;
 import us.lsi.mochila.datos.DatosMochila;
@@ -44,7 +44,7 @@ public record MochilaVertexPD(Integer index, Integer capacidadRestante)
 
 	@Override
 	public Boolean isBaseCase() {
-		return this.index == MochilaVertexI.n || this.index == n-1;
+		return this.index == MochilaVertex.n || this.index == n-1;
 	}
 
 	@Override
