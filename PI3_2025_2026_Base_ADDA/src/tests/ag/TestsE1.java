@@ -10,8 +10,8 @@ import us.lsi.ag.agstopping.StoppingConditionFactory;
 public class TestsE1 {
 
 	public static void main(String[] args) {
-		AlgoritmoAG.POPULATION_SIZE = 50;  // aumentar si no se obtiene un optimo
-		StoppingConditionFactory.NUM_GENERATIONS = 500; // aumentar si no se obtiene un optimo
+		AlgoritmoAG.POPULATION_SIZE = 5000000;  // aumentar si no se obtiene un optimo
+		StoppingConditionFactory.NUM_GENERATIONS = 500000000; // aumentar si no se obtiene un optimo
 		
 		List.of(1,2,3).forEach(i -> { // indique los tests a realizar
 			var cr = new Cromosoma1("datos_entrada/ejercicio1/DatosEntrada"+i+".txt");
