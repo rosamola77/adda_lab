@@ -117,23 +117,6 @@ public class Datos1 {
 	public static String getNombre(Integer i) {
 		return getCandidato(i).nombre();
 	}
-	
-	// Devuelve 1 si el candidato 'i' posee la cualidad 'j', 0 en caso contrario
-	public static Integer tieneCualidad(Integer i, Integer j) {
-	    String cualidadBuscada = cualidades.get(j);
-	    if (candidatos.get(i).cualidades().contains(cualidadBuscada)) {
-	        return 1;
-	    }
-	    return 0;
-	}
-	
-	// Devuelve 1 si el candidato 'i' es incompatible con el candidato 'j', 0 en caso contrario
-	public static Integer sonIncompatibles(Integer i, Integer j) {
-	    if (candidatos.get(i).incompatibilidades().contains(j)) {
-	        return 1;
-	    }
-	    return 0;
-	}
 
 	public static void toConsole(String file) {
 		String2.toConsole("%s %s:", String2.line("_",58), file);
