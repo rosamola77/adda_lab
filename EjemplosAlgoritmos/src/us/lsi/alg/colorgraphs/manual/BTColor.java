@@ -49,8 +49,8 @@ public class BTColor {
 		} else {
 			List<Integer> alternativas = this.estado.vertice().actions();
 			for(Integer a:alternativas) {	
-				Integer cota = this.estado.vertice().neighbor(a).nc();
-				if(this.minValue != null && cota >= this.minValue) continue;
+				Integer pec = this.estado.vertice().neighbor(a).nc();
+				if(this.minValue != null && pec >= this.minValue) continue;
 				this.estado.forward(a);
 				btm();  
 				this.estado.back(a);

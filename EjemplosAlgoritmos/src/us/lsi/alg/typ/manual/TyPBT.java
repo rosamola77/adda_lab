@@ -46,8 +46,8 @@ public class TyPBT {
 		} else {
 			List<Integer> alternativas = this.estado.vertice().actions();
 			for(Integer a:alternativas) {	
-				Integer cota = Heuristica.cota(this.estado.vertice,a);
-				if(this.minValue != null && cota >= this.minValue) continue;
+				Integer pec = Heuristica.cota(this.estado.vertice,a);
+				if(this.minValue != null && pec >= this.minValue) continue;
 				this.estado.forward(a);
 				bt();  
 				this.estado.back(a);
