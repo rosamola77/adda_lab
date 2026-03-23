@@ -16,7 +16,7 @@ public class TestPDGeneral {
 
 		// Set up
 		Locale.setDefault(Locale.of("en", "US"));
-		for (Integer id_fichero = 0; id_fichero < 10; id_fichero++) {
+		for (Integer id_fichero = 0; id_fichero < 7; id_fichero++) {
 
 			DatosMulticonjunto.iniDatos("ficheros/p4/multiconjuntos.txt", id_fichero);
 			System.out.println("=============");

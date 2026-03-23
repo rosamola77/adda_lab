@@ -7,7 +7,6 @@ import java.util.stream.IntStream;
 
 import us.lsi.common.List2;
 import us.lsi.common.Multiset;
-import us.lsi.mochila.datos.ObjetoMochila;
 
 public record MulticonjuntoHyperVertexI(Integer indice,Integer sumaRestante) 
 	implements  MulticonjuntoHyperVertex {
